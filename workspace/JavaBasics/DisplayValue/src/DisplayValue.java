@@ -22,6 +22,8 @@ public class DisplayValue {
 		System.out.println(value6);
 		System.out.println(value7);
 		System.out.println(value8);
+		
+		System.out.println(value1 + " " + value2);
 	}
 
 }
