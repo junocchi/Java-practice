@@ -2,7 +2,8 @@
 public class DisplayValue {
 
 	public static void main(String[] args) {
-			
+		
+		
 //print these values: 10, 56.9, false, S, Prisca, true, 347890, 2147483650
 		
 		int value1=10;
@@ -26,4 +27,5 @@ public class DisplayValue {
 		System.out.println(value1 + " " + value2);
 	}
 
+	
 }

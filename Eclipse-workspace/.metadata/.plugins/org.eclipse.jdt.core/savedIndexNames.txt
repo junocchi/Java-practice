@@ -1,1 +1,0 @@
-INDEX VERSION 1.132+/Users/jumacbookpro/Wiley-Edge/Java-practice/Eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
