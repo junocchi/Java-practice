@@ -1,5 +1,3 @@
-//to improve: if the user types something that is not valid, give them the chance to correct
-
 import java.util.Scanner;
 import java.lang.Math;
 
@@ -9,7 +7,6 @@ public class RockPaperScissors {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("Between 1 and 10, how many rounds do you want to play?");
 		int roundsToPlay = scanner.nextInt();
-		
 		
 		while(true) {
 			if (roundsToPlay<1 ||  roundsToPlay>10) {
@@ -46,7 +43,9 @@ public class RockPaperScissors {
 			Scanner scanner=new Scanner(System.in);
 			System.out.println("Choose 1 for Rock, 2 for Paper or 3 for Scissors: ");
 			int usersChoice = scanner.nextInt();
+				if(usersChoice == 1 || usersChoice == 2 || usersChoice == 3)
 			
+			//check wins
 			if(usersChoice > computersChoice) {
 				userWins++;
 			}
@@ -56,12 +55,13 @@ public class RockPaperScissors {
 			else {
 				ties++;
 			}
+			System.out.println("The computer played: " + computersChoice);
+			System.out.println("You played: " + usersChoice);
 			
 			totalRoundsToPlay--;
 			counter++;
 		}
-		
-		
+
 		printResults(userWins, computerWins, ties);
 		declareWinner(userWins, computerWins, ties);
 		keepPlaying();
@@ -76,7 +76,12 @@ public class RockPaperScissors {
 	
 	//declare the winner
 	public static void declareWinner(int userWins, int computerWins, int ties) {
-		if(userWins >= computerWins && userWins >= ties) {
+		/*I added the following one because in case everybody scores 1 the
+		*program was giving the victory to the user, instead of a tie*/
+		if(userWins == computerWins && userWins == ties) {
+			System.out.println("It's a tie! No winners this time.");
+		}
+		else if(userWins >= computerWins && userWins >= ties) {
 			System.out.println("Congratulations! Victory is yours!");
 		}
 		else if(computerWins >= userWins && computerWins >= ties) {
@@ -94,15 +99,16 @@ public class RockPaperScissors {
 		int keepPlaying = scanner.nextInt();
 		
 		switch(keepPlaying) {
-		case 1: {
-			main(null);
-		}
-		case 2: {
-			System.out.println("Thanks for playing!");
-			break;
-		}
-		default: 
-			System.out.println("Invalid number.");
-		}
+			case 1: {
+				main(null);
+				break;
+			}
+			case 2: {
+				System.out.println("Thanks for playing!");
+				break;
+			}
+			default: 
+				System.out.println("Invalid number.");
+			}
 	}
 }

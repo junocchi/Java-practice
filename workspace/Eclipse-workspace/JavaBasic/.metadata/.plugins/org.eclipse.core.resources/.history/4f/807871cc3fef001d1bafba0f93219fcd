@@ -1,0 +1,12 @@
+
+public class InchToFeet {
+
+	public static void main(String[] args) {
+		int inch=18;
+		long feet= (inch / 12);
+		
+		System.out.println(feet);
+
+	}
+
+}

@@ -1,0 +1,10 @@
+
+public class GreetDemoClass {
+
+	public static void main(String[] args) {
+		System.out.print("Hello Everyone!!!");
+		System.out.print("One more message.");
+
+	}
+
+}
