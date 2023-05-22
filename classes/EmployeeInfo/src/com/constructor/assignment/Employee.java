@@ -20,6 +20,7 @@ public class Employee {
 		this.empName = empName;
 		this.empId = empId;
 	}
+
 //	3. Employee name, id and age
 	public Employee(String empName, int empId, int empAge) {
 		super();
@@ -92,9 +93,9 @@ public class Employee {
 		this.empLocation = empLocation;
 		this.empExpInYrs = empExpInYrs;
 	}
-	
+
 	public String getEmpName() {
-	    return empName;
+		return empName;
 	}
 
 	public int getEmpId() {
@@ -140,5 +141,5 @@ public class Employee {
 	public void setEmpName(String empName) {
 		this.empName = empName;
 	}
-	
+
 }
