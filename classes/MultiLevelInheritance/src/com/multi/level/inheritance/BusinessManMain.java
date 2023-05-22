@@ -10,9 +10,13 @@ public class BusinessManMain {
 
 		System.out.println("===================");
 
+		// The option below uses the "Super" implicit call from Class Employee
 		Employee employee = new Employee();
 		employee.inputEmployeeData(1, "Mari", "Developer", "IT", 40.000);
-		employee.displayEmployeeWithPersonData();
+		
+		//Alternatively we can keep input/display
+		//employee.inputEmployeeData(1, "Mari", "Developer", "IT", 40.000);
+		//employee.displayEmployeeWithPersonData();
 
 		System.out.println("===================");
 

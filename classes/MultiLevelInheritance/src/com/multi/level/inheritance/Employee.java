@@ -5,6 +5,16 @@ public class Employee extends Person {
 	private String department;
 	private double salary;
 	
+	public Employee() {
+		super();
+		System.out.println("Constructor using super in Class Employee");
+		displayPersonData();
+		System.out.println("Class Employee");
+		System.out.println("Designation: " + designation + ".");
+		System.out.println("Department: " + department + ".");
+		System.out.println("Salary: " + salary + ".");
+	}
+	
 	public String getDesignation() {
 		return designation;
 	}
@@ -30,14 +40,14 @@ public class Employee extends Person {
 		this.salary = salary;
 	}
 	
-	
-	public void displayEmployeeWithPersonData() {
-		displayPersonData();
-		System.out.println("Class Employee");
-		System.out.println("Designation: " + designation + ".");
-		System.out.println("Department: " + department + ".");
-		System.out.println("Salary: " + salary + ".");
-	}
+// If decide not to use "Super" we can uncomment the block below:
+//	public void displayEmployeeWithPersonData() {
+//		displayPersonData();
+//		System.out.println("Class Employee");
+//		System.out.println("Designation: " + designation + ".");
+//		System.out.println("Department: " + department + ".");
+//		System.out.println("Salary: " + salary + ".");
+//	}
 	
 
 }
