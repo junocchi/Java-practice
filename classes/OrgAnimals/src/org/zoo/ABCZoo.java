@@ -19,6 +19,12 @@ public class ABCZoo {
 		lion.isVegetarian();
 		lion.canClimb();
 		
+		elephant.informationString();
+		elephant.soundType();
+		elephant.colorWeightAndAge();
+		elephant.isVegetarian();
+		elephant.canClimb();
+		
 		System.out.println("===================");
 		
 		tiger.informationString();
