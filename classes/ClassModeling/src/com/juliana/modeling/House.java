@@ -23,6 +23,7 @@ public class House {
 		this.width = width;
 		this.marketValue = marketValue;
 		this.material = material;
+		
 	}
 
 	public double getLatitude() {
@@ -82,6 +83,7 @@ public class House {
 	}
 
 }
+
 
 /*
  * Model a house as if the class were to be part of a GPS mapping system. Model
