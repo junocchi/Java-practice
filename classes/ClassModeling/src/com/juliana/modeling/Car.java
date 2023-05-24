@@ -1,3 +1,8 @@
+/*
+ * Model a car as if the class were to be part of an inventory system for a car
+ * dealership. Model a car as if the class were to be part of a video game.
+ */
+
 package com.juliana.modeling;
 
 public class Car {
@@ -116,6 +121,7 @@ public class Car {
 }
 
 /*
- * Model a car as if the class were to be part of an inventory system for a car
- * dealership. Model a car as if the class were to be part of a video game.
+ * Next: Determine what behaviors the class should have and then define (do not
+ * implement) the methods associated with each behavior. Be prepared to explain
+ * the reasons behind all of your design decisions.
  */

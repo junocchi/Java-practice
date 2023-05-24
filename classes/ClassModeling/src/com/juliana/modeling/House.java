@@ -1,3 +1,8 @@
+/*
+ * Model a house as if the class were to be part of a GPS mapping system. Model
+ * a house as if the class were to be part of a 3-D design system.
+ */
+
 package com.juliana.modeling;
 
 public class House {
@@ -23,7 +28,7 @@ public class House {
 		this.width = width;
 		this.marketValue = marketValue;
 		this.material = material;
-		
+
 	}
 
 	public double getLatitude() {
@@ -84,8 +89,8 @@ public class House {
 
 }
 
-
 /*
- * Model a house as if the class were to be part of a GPS mapping system. Model
- * a house as if the class were to be part of a 3-D design system.
+ * Next: Determine what behaviors the class should have and then define (do not
+ * implement) the methods associated with each behavior. Be prepared to explain
+ * the reasons behind all of your design decisions.
  */

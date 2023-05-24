@@ -1,3 +1,9 @@
+/*
+ * Model an airplane as if the class were to be part of an air traffic control
+ * system. Model an airplane as if the class were to be part of a flight
+ * simulator.
+ */
+
 package com.juliana.modeling;
 
 public class Airplane {
@@ -117,7 +123,7 @@ public class Airplane {
 }
 
 /*
- * Model an airplane as if the class were to be part of an air traffic control
- * system. Model an airplane as if the class were to be part of a flight
- * simulator.
+ * Next: Determine what behaviors the class should have and then define (do not
+ * implement) the methods associated with each behavior. Be prepared to explain
+ * the reasons behind all of your design decisions.
  */

@@ -1,3 +1,9 @@
+/*
+ * Model ice cream as if the class were to be part of the control system at the
+ * dairy that makes the ice cream. Model ice cream as if the class were to be
+ * part of the stocking system at a grocery store.
+ */
+
 package com.juliana.modeling;
 
 public class IceCream {
@@ -95,7 +101,7 @@ public class IceCream {
 }
 
 /*
- * Model ice cream as if the class were to be part of the control system at the
- * dairy that makes the ice cream. Model ice cream as if the class were to be
- * part of the stocking system at a grocery store.
+ * Next: Determine what behaviors the class should have and then define (do not
+ * implement) the methods associated with each behavior. Be prepared to explain
+ * the reasons behind all of your design decisions.
  */
