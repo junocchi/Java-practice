@@ -63,9 +63,9 @@ public class EmployeeUserInterfaceImpl implements EmployeeUserInterface {
 			//write logic to search for employee by ID and display
 			System.out.println("Enter Employee ID number: ");
 		    int idNum = scanner.nextInt();
-		    String employeeName = bussinessLogic.findEmployeeNameById(idNum);
-		    if (employeeName != null) {
-		        System.out.println("Search result: " + employeeName);
+		    Employee emp = bussinessLogic.findEmployeeNameById(idNum);
+		    if (emp != null) {
+		        System.out.println("Search result: " + emp);
 		    } else {
 		        System.out.println("Employee not found for ID number: " + idNum);
 		    }

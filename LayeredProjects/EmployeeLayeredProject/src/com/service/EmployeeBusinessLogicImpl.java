@@ -52,8 +52,15 @@ public class EmployeeBusinessLogicImpl implements EmployeeBusinessLogic {
 		}
 	}
 	@Override
-	public String findEmployeeNameById(int idNum) {
-		// TODO Auto-generated method stub
+	public Employee findEmployeeNameById(int idNum) {
+		//picking one one object from employeeList collection and storing in employee object
+		for(Employee employee:employeeList) {
+			//is employee object have same id as that what user have entered
+			if(employee.getEmpId()==idNum)
+//				return the employee object
+				return employee;
+		}
+		
 		return null;
 	}
 	
