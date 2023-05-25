@@ -10,4 +10,5 @@ public interface EmployeeBusinessLogic {
 	boolean addEmployee(Employee employee);
 	boolean deleteEmployee(int id);
 	public void saveAllEmployees();
+	String findEmployeeNameById(int idNum);
 }

@@ -16,7 +16,8 @@ public class EmployeeUserInterfaceImpl implements EmployeeUserInterface {
 		System.out.println("1. List All Employees");
 		System.out.println("2. Add New Employee");
 		System.out.println("3. Delete Existing Employee");
-		System.out.println("4. Exit");
+		System.out.println("4. Search for Employee by ID");
+		System.out.println("5. Exit");
 
 	}
 
@@ -59,10 +60,21 @@ public class EmployeeUserInterfaceImpl implements EmployeeUserInterface {
 				System.out.println("Employee with id "+id+" does not exist");
 			break;
 		case 4:
+			//write logic to search for employee by ID and display
+			System.out.println("Enter Employee ID number: ");
+		    int idNum = scanner.nextInt();
+		    String employeeName = bussinessLogic.findEmployeeNameById(idNum);
+		    if (employeeName != null) {
+		        System.out.println("Search result: " + employeeName);
+		    } else {
+		        System.out.println("Employee not found for ID number: " + idNum);
+		    }
+		    break;
+			
+		case 5:
 			bussinessLogic.saveAllEmployees();
 			System.out.println("Thanks for Using Employee Management System");
 			System.exit(0);
-			
 		default:
 			System.out.println("Invalid Choice");
 		}

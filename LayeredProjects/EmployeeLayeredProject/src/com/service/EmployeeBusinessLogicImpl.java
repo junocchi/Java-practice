@@ -2,6 +2,7 @@ package com.service;
 
 import java.util.LinkedList;
 
+
 import com.dto.Employee;
 import com.persistence.EmployeeDataAccess;
 import com.persistence.EmployeeDataAccessImpl;
@@ -49,6 +50,11 @@ public class EmployeeBusinessLogicImpl implements EmployeeBusinessLogic {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	@Override
+	public String findEmployeeNameById(int idNum) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 
