@@ -43,6 +43,8 @@ public class EmployeeBusinessLogicImpl implements EmployeeBusinessLogic {
 		return false;
 	}
 	
+	//We cannot call directly a persistence layer method without declaring
+	//it here first. Even if there's no logic, like this case.
 	public void saveAllEmployees() {
 		try {
 			dataAccess.writeRecords(employeeList);
