@@ -1,6 +1,7 @@
 package com.presentation;
 
 import java.util.LinkedList;
+
 import java.util.Scanner;
 
 import com.dto.Employee;
@@ -22,7 +23,7 @@ public class EmployeeUserInterfaceImpl implements EmployeeUserInterface {
 	}
 
 	@Override
-	public void performMenu(int choice) {
+	public void performMenu(int choice) throws Exception {
 		Scanner scanner=new Scanner(System.in);
 		switch (choice) {
 		case 1: 
@@ -60,7 +61,7 @@ public class EmployeeUserInterfaceImpl implements EmployeeUserInterface {
 				System.out.println("Employee with id "+id+" does not exist");
 			break;
 		case 4:
-			//write logic to search for employee by ID and display
+			//search for employee by ID and display
 			System.out.println("Enter Employee ID number: ");
 		    int idNum = scanner.nextInt();
 		    Employee emp = bussinessLogic.findEmployeeNameById(idNum);
