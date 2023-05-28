@@ -1,5 +1,0 @@
-INDEX VERSION 1.132+/Users/jumacbookpro/Wiley-Edge/Java-practice/workspace/JavaBasic/.metadata/.plugins/org.eclipse.jdt.core
-4066848703.index
-3320836677.index
-1743726002.index
-1865797976.index
