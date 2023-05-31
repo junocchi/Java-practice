@@ -1,15 +1,17 @@
 package com.ju.decimals;
 import java.math.BigDecimal;
 
-public class bigDecimal {
+public class BigDecimalDemo {
 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BigDecimal bdValue1, bdValue2;
+		BigDecimal bdValue1, bdValue2, three, five;
 		
 		bdValue1 = new BigDecimal("56893.54000004");
 		bdValue2 = new BigDecimal("56453.54660006");
+		three = new BigDecimal("3");
+		five = new BigDecimal("5");
 		
 		//Addition
 		bdValue1 = bdValue1.add(bdValue2);
@@ -28,6 +30,7 @@ public class bigDecimal {
 		}  else {
 			System.out.println(bdValue2 + " value2 is greater than " + bdValue1);
 		}
+		
 	}
 
 }
