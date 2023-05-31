@@ -1,6 +1,10 @@
 # Java-practice
 Exercises and tech tests while learning Java (from Basics to Intermediate).
 
+## Tech Tests:
+- DVD Library
+- Game Rock, Paper, Scissors
+- Print Factorial
 ## Java Basics:
 Java Lifecycle, Operators, Variables, Data Types, TypeConversion, Pre and Post increment, Boolean Expressions, Relational and Conditional Operators, If and Switch Statements, Collecting Console Input (Scanner and Parsing), Loops, Flowcharts, Arrays, Types of Arrays, Debugging, and Random numbers.
 ## Java Classes:
