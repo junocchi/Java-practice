@@ -1,5 +1,16 @@
 package com.ju.student;
 
-public class StudentClass {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+@AllArgsConstructor
 
+public class StudentClass {
+	
+	@Getter
+	@Setter
+	
+	
+	private int num;
+	
 }
