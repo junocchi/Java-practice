@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- setter injections -->
+	<!-- the "dto" bean will be injected into the "dataAccess" bean as a dependency -->
+	<bean id="dataAccess"
+		class="com.sujata.employee.persistence.EmployeeDataAccessImpl">
+		
+	</bean>
+
+	<!-- the "dataAccess" bean will be injected into the "service" bean as a dependency -->
+	<bean id="service"
+		class="com.sujata.employee.service.EmployeeBussinessLogicImpl">
+		<property name="dataAccess" ref="dataAccess"></property>
+	</bean>
+
+	<!--the "service" bean will be injected into the "userInterface" bean as a dependency-->
+	<bean id="userInterface"
+		class="com.sujata.employee.presentation.EmployeeUserInterfaceImpl">
+		<property name="bussinessLogic" ref="service"></property>
+	</bean>
+</beans>
