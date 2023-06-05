@@ -1,0 +1,4 @@
+To fix:
+1) not returning the number of coins smaller than 25cents
+2) not recording the name of the product to audit file (only the time)
+3) tests are not passing
