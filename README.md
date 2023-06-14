@@ -2,6 +2,7 @@
 Exercises and tech tests while learning Java.
 
 ## Tech Tests:
+- Flooring Order - Group Project (Maven, Spring with Java Configuration)
 - Vending Machine with Java Config class
 - Vending Machine Java Projects
 - DVD Library
@@ -16,3 +17,4 @@ Classes and Objects, Public Interface / Private Implementation, Encapsulation an
 Enums, Lambdas and Streams, Service Layer, Unit Testing and JUnit, DateTime API, and BigDecimal.
 ## Java Advanced Maven:
 Maven lifecycle, and Spring for dependency injection.
+
