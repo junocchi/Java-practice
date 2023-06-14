@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+6,Nocchi Rose,TX,4.45,Carpet,120,2.25,2.10,270.00,252.00,23.229000,545.23

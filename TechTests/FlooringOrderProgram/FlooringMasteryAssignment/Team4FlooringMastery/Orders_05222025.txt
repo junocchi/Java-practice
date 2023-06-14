@@ -1,0 +1,2 @@
+OrderNumber,CustomerName,State,TaxRate,ProductType,Area,CostPerSquareFoot,LaborCostPerSquareFoot,MaterialCost,LaborCost,Tax,Total
+8,Lila Luna,TX,4.45,Carpet,140,2.25,2.10,315.00,294.00,27.100500,636.10
