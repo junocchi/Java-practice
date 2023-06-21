@@ -23,7 +23,7 @@
           $.ajax({
             url: "https://dummyjson.com/products",
             type: "GET",
-            success: function (data) {
+            success: function (data) { //data is a variable that will store whatever is coming as a response
               $("#showAllProducts").html(displayAllProducts(data));
             },
             dataType: "json",
