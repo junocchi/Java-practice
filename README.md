@@ -14,7 +14,7 @@ Exercises and tech tests while learning Java and jQuery with Ajax.
 - Users Ajax API request with two tabs
 
 ##### Output of tab 1 - Display All Users
-<img height="200" src="./JavaWebApp/src/DisplayAllUsers.png">
+<img height="200" src="./JavaWebApp/src/DisplayAllUsers1.png">
 
 ##### Output of tab 2 - Search User By ID number 6
 <img height="150" src="./JavaWebApp/src/DisplayUserById.png">
