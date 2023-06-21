@@ -17,7 +17,7 @@ Exercises and tech tests while learning Java and jQuery with Ajax.
 <img height="200" src="./JavaWebApp/src/DisplayAllUsers1.png">
 
 ##### Output of tab 2 - Search User By ID number 6
-<img height="150" src="./JavaWebApp/src/DisplayUserById6.png">
+<img height="90" src="./JavaWebApp/src/DisplayUserById6.png">
 
 ## Java Advanced Maven:
 Maven lifecycle, and Spring for dependency injection.
