@@ -102,7 +102,7 @@
             "</td></tr>"+
             data.users[index].bank +
             "</td></tr>"+
-            data.users[index].ompany +
+            data.users[index].company +
             "</td></tr>"+
             data.users[index].ein +
             "</td></tr>"+
@@ -114,22 +114,64 @@
         table += "</table>";
         return table;
       }
-      function displayProduct(data) {
+      function displayUser(data) {
         var table =
-          '<table border="1"><tr><th>ProductID</th><th>Name</th><th>Description</th><th>Price</th><th>Rating</th></tr>';
+        '<table border="1"><tr><th>UserID</th><th>FirstName</th><th>LastName</th><th>MaidenName</th><th>Age</th></tr><th>Gender</th><th>Email</th><th>Phone</th><th>Username</th><th>Password</th><th>BirthDate</th><th>Image</th><th>BloodGroup</th><th>Height</th><th>Weight</th><th>EyeColor</th><th>Hair</th><th>Domain</th><th>Ip</th><th>Address</th><th>MacAddress</th><th>University</th><th>Bank</th><th>Company</th><th>Ein</th><th>Ssn</th><th>UserAgent</th>';
 
-        table +=
-          "<tr><td>" +
-          data.id +
-          "</td><td>" +
-          data.title +
-          "</td><td>" +
-          data.description +
-          "</td><td>" +
-          data.price +
-          "</td><td>" +
-          data.rating +
-          "</td></tr>";
+          table +=
+            "<tr><td>" +
+            data.users[index].id +
+            "</td><td>" +
+            data.users[index].firstName +
+            "</td><td>" +
+            data.users[index].lastName +
+            "</td><td>" +
+            data.users[index].maidenName +
+            "</td><td>" +
+            data.users[index].age +
+            "</td></tr>"+
+            data.users[index].gender +
+            "</td></tr>"+
+            data.users[index].email +
+            "</td></tr>"+
+            data.users[index].username +
+            "</td></tr>"+
+            data.users[index].password +
+            "</td></tr>"+
+            data.users[index].birthDate +
+            "</td></tr>"+
+            data.users[index].image +
+            "</td></tr>"+
+            data.users[index].bloodGroup +
+            "</td></tr>"+
+            data.users[index].height +
+            "</td></tr>"+
+            data.users[index].weight +
+            "</td></tr>"+
+            data.users[index].eyeColor +
+            "</td></tr>"+
+            data.users[index].hair +
+            "</td></tr>"+
+            data.users[index].domain +
+            "</td></tr>"+
+            data.users[index].ip +
+            "</td></tr>"+
+            data.users[index].address +
+            "</td></tr>"+
+            data.users[index].macAddress +
+            "</td></tr>"+
+            data.users[index].university +
+            "</td></tr>"+
+            data.users[index].bank +
+            "</td></tr>"+
+            data.users[index].company +
+            "</td></tr>"+
+            data.users[index].ein +
+            "</td></tr>"+
+            data.users[index].ssn +
+            "</td></tr>"+
+            data.users[index].userAgent +
+            "</td></tr>";
 
         table += "</table>";
         return table;
