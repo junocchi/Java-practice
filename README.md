@@ -1,5 +1,5 @@
 # Java-practice
-Exercises and tech tests while learning Java and jQuery with Ajax.
+Exercises and tech tests while learning Java,jQuery with Ajax, and Spring Boot as a trainee at Wiley Edge.
 
 ## Tech Tests:
 - Flooring Order - Group Project (Maven, Spring with Java Configuration)
