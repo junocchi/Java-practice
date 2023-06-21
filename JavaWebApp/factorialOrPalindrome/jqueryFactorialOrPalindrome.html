@@ -1,0 +1,43 @@
+<!--
+  create HTML file to accept the number from the user and create two buttons one to 
+  display factorial and second to check weather the number is palindrome or not.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      
+      function factorial() {
+        var num = parseInt($("#num").val());
+        var fac = num;
+        $("#result").text("Factorial: " + fac);
+      }
+
+      function palindrome() {
+        var num = parseInt($("#num").val());
+        var pal = num;
+        $("#result").text("Palindrome: " + pal);
+      }
+      $(document).ready(function () {
+        $("#fac").click(factorial);
+        $("#pal").click(palindrome);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Factorial or Palindrome</h1>
+    Enter Number: <input type="text" id="num" /><br /><br />
+    <input type="button" value="Factorial" id="fac" />
+    <input type="button" value="Palindrome" id="pal" /><br /><br />
+    <div id="result"></div>
+  </body>
+</html>
