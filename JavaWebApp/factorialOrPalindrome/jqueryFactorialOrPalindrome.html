@@ -9,6 +9,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -18,18 +19,31 @@
       
       function factorial() {
         var num = parseInt($("#num").val());
-        var fac = num;
-        $("#result").text("Factorial: " + fac);
+        
+        function calcFactorial(num) {
+          if (num === 0 || num === 1){
+            return 1;
+          } else {
+            return num * calcFactorial(num - 1);
+          }
+        }
+        var fac = calcFactorial(num);
+          $("#result").text("Factorial: " + fac);
       }
 
-      function palindrome() {
-        var num = parseInt($("#num").val());
-        var pal = num;
-        $("#result").text("Palindrome: " + pal);
+      function checkPalindrome() {
+        var num = $("#num").val();
+        var reversedNum = num.split("").reverse().join("");
+        if (num === reversedNum) {
+          $("#result").text(num + " is a Palindrome!");
+        } else {
+          $("#result").text(num + " is not a Palindrome!");
+        }
       }
+
       $(document).ready(function () {
         $("#fac").click(factorial);
-        $("#pal").click(palindrome);
+        $("#pal").click(checkPalindrome);
       });
     </script>
   </head>
