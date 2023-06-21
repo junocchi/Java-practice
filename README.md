@@ -1,5 +1,5 @@
 # Java-practice
-Exercises and tech tests while learning Java.
+Exercises and tech tests while learning Java and jQuery with Ajax.
 
 ## Tech Tests:
 - Flooring Order - Group Project (Maven, Spring with Java Configuration)
@@ -9,12 +9,25 @@ Exercises and tech tests while learning Java.
 - Date & Time
 - Game Rock, Paper, Scissors
 - Print Factorial
-## Java Basics:
-Java Lifecycle, Operators, Variables, Data Types, TypeConversion, Pre and Post increment, Boolean Expressions, Relational and Conditional Operators, If and Switch Statements, Collecting Console Input (Scanner and Parsing), Loops, Flowcharts, Arrays, Types of Arrays, Debugging, and Random numbers.
-## Java Classes:
-Classes and Objects, Public Interface / Private Implementation, Encapsulation and Data Hiding, Properties, Accessors (getters) and Mutators (setters), Methods, Constructors, Object Instantiation and Method Invocation, Static, Memory Management (Stack, Heap and Garbage Collection), Interfaces and Polymorphism, Composition, Inheritance, Collection and Maps, Javadoc, File I/O, Exceptions, Software Development Lifecycle (SDLC), Agile Development, Tiered Application Design Concepts for CRUD Applications, Packages, Data Marshaling and Unmarshaling.
-## Java Intermediate:
-Enums, Lambdas and Streams, Service Layer, Unit Testing and JUnit, DateTime API, and BigDecimal.
+
+## jQuery with Ajax:
+- Users Ajax API request with two tabs
+
+##### Output of tab 1 - Display All Users
+<img height="200" src="./JavaWebApp/src/DisplayAllUsers.png">
+
+##### Output of tab 2 - Search User By ID number 6
+<img height="150" src="./JavaWebApp/src/DisplayUserById.png">
+
 ## Java Advanced Maven:
 Maven lifecycle, and Spring for dependency injection.
+
+## Java Intermediate:
+Enums, Lambdas and Streams, Service Layer, Unit Testing and JUnit, DateTime API, and BigDecimal.
+
+## Java Classes:
+Classes and Objects, Public Interface / Private Implementation, Encapsulation and Data Hiding, Properties, Accessors (getters) and Mutators (setters), Methods, Constructors, Object Instantiation and Method Invocation, Static, Memory Management (Stack, Heap and Garbage Collection), Interfaces and Polymorphism, Composition, Inheritance, Collection and Maps, Javadoc, File I/O, Exceptions, Software Development Lifecycle (SDLC), Agile Development, Tiered Application Design Concepts for CRUD Applications, Packages, Data Marshaling and Unmarshaling.
+
+## Java Basics:
+Java Lifecycle, Operators, Variables, Data Types, TypeConversion, Pre and Post increment, Boolean Expressions, Relational and Conditional Operators, If and Switch Statements, Collecting Console Input (Scanner and Parsing), Loops, Flowcharts, Arrays, Types of Arrays, Debugging, and Random numbers.
 
