@@ -23,7 +23,7 @@ public class MyReadDataDemo {
 
 //			2.Connect
 //			2.1 Connect to Database
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WileyDI004", "root", "root-Juli-23");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WileyDI004", "root", "************");
 			// 2.2 Prepare/Execute Query
 			preparedStatement = connection.prepareStatement("SELECT * FROM EMPLOYEE");
 
