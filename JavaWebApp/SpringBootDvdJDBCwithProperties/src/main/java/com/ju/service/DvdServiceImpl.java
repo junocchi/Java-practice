@@ -1,12 +1,12 @@
-package com.service;
+package com.ju.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.entity.Dvd;
-import com.persistence.DvdDao;
+import com.ju.entity.Dvd;
+import com.ju.persistence.DvdDao;
+import com.ju.persistence.DvdDaoImpl;
 
 @Service("dvdService")
 public class DvdServiceImpl implements DvdService {
@@ -24,13 +24,13 @@ public class DvdServiceImpl implements DvdService {
 		return dvdDao.addRecord(dvd) > 0;
 	}
 
-	// choice 2 
+	// choice 2 - 
 	@Override
 	public boolean deleteDvdById(int id) {
 		return dvdDao.deleteRecord(id)>0;
 	}
 
-	// choice 3 
+	// choice 3 - 
 	@Override
 	public boolean updateRating(int id, int newRating) {
 		return dvdDao.updateRecord(id, newRating)>0;

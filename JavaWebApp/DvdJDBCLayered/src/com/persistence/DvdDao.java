@@ -8,5 +8,5 @@ public interface DvdDao {
 	List<Dvd> getAllRecords();
 	int addRecord(Dvd dvd);
 	int deleteRecord(int dvdID);
-	//missing edit dvd
+	int updateRating(int id, int newRating);
 }

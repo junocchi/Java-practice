@@ -12,7 +12,7 @@ import com.ju.entity.Dvd;
 import com.ju.persistence.DvdDao;
 import com.ju.persistence.DvdDaoImpl;
 
-@Service("empService")
+@Service("dvdService")
 public class DvdServiceImpl implements DvdService {
 
 	private DvdDao dvdDao;

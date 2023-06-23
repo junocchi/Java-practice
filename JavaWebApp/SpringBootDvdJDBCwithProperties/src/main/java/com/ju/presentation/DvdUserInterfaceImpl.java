@@ -1,13 +1,16 @@
-package com.presentation;
+package com.ju.presentation;
 
 import java.util.List;
+
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
-import com.entity.Dvd;
-import com.service.DvdService;
+import com.ju.entity.Dvd;
+import com.ju.service.DvdService;
+import com.ju.service.DvdServiceImpl;
 
 @Component("dvdPresentation")
 public class DvdUserInterfaceImpl implements DvdUserInterface {
@@ -23,7 +26,7 @@ public class DvdUserInterfaceImpl implements DvdUserInterface {
 	public void showMenu() {
 		System.out.println("1. Add a new DVD to the library");
 		System.out.println("2. Delete a DVD by ID");
-		System.out.println("3. Edit User Rating");
+		System.out.println("3. Edit DVD information");
 		System.out.println("4. Display all DVDs");
 		System.out.println("5. Exit");
 

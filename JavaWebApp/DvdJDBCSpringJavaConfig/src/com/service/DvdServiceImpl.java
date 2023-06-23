@@ -19,13 +19,13 @@ public class DvdServiceImpl implements DvdService {
 		return dvdDao.addRecord(dvd) > 0;
 	}
 
-	// choice 2 - not working
+	// choice 2
 	@Override
 	public boolean deleteDvdById(int id) {
 		return dvdDao.deleteRecord(id)>0;
 	}
 
-	// choice 3 - not working
+	// choice 3
 	@Override
 	public boolean updateRating(int id, int newRating) {
 		return dvdDao.updateRecord(id, newRating)>0;

@@ -6,12 +6,11 @@ import com.ju.entity.Dvd;
 
 public interface DvdService {
 
-	List<Dvd> getAllDvds();
-
 	boolean addDvd(Dvd dvd);
 
 	boolean deleteDvdById(int dvdID);
+	
+	boolean updateRating(int id,int newRating);
 
-	boolean updateRating(int dvdId, int newRating);
-
+	List<Dvd> getAllDvds();
 }
