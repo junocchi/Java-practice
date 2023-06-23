@@ -1,19 +1,16 @@
 package com.service;
 
 import java.util.List;
+
 import com.entity.Dvd;
 
 public interface DvdService {
-
-	List<Dvd> getAllDvds();
 
 	boolean addDvd(Dvd dvd);
 
 	boolean deleteDvdById(int dvdID);
 	
-	boolean editDvd(String title);
+	boolean updateRating(int id,int newRating);
 
-	Dvd findDvdByTitle(String title);
-
-	
+	List<Dvd> getAllDvds();
 }

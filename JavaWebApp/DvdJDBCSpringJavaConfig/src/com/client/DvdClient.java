@@ -1,20 +1,23 @@
 package com.client;
 
 import java.util.Scanner;
-
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import com.presentation.DvdUserInterface;
 import com.presentation.DvdUserInterfaceImpl;
 
 public class DvdClient {
 
 	public static void main(String[] args) {
-		DvdUserInterface DvdUserInterface = new DvdUserInterfaceImpl();
+		AnnotationConfigApplicationContext springContainer=new AnnotationConfigApplicationContext(DvdConfig.class);
+		DvdUserInterface dvdUserInterface=(DvdUserInterface)springContainer.getBean("userInterface");
+		
+		
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
-			DvdUserInterface.showMenu();
+			dvdUserInterface.showMenu();
 			System.out.println("Enter choice: ");
 			int choice = scanner.nextInt();
-			DvdUserInterface.performMenu(choice);
+			dvdUserInterface.performMenu(choice);
 
 		}
 

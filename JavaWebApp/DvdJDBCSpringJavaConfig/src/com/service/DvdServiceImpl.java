@@ -1,14 +1,17 @@
 package com.service;
 
-import java.util.LinkedList;
 import java.util.List;
 import com.entity.Dvd;
 import com.persistence.DvdDao;
-import com.persistence.DvdDaoImpl;
 
 public class DvdServiceImpl implements DvdService {
 
 	private DvdDao dvdDao;
+	
+	public DvdServiceImpl(DvdDao dvdDao) {
+		super();
+		this.dvdDao = dvdDao;
+	}
 
 	// choice 1
 	@Override
@@ -24,18 +27,8 @@ public class DvdServiceImpl implements DvdService {
 
 	// choice 3 - not working
 	@Override
-	public boolean editDvd(String title) {
-		return dvdDao.updateRecord(UserRating, Title)>0;
-
-	}
-	
-	@Override
-	public Dvd findDvdByTitle(String title) {
-		for (Dvd dvd : dvdList) {
-			if (dvd.getTitle().equals(title))
-				return dvd;
-		}
-		return null;
+	public boolean updateRating(int id, int newRating) {
+		return dvdDao.updateRecord(id, newRating)>0;
 	}
 	
 	// choice 4

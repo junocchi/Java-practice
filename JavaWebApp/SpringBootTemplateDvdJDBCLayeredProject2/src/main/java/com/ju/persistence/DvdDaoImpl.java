@@ -1,36 +1,34 @@
-package com.persistence;
+package com.ju.persistence;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-import com.entity.Dvd;
+import org.springframework.stereotype.Repository;
 
+import com.ju.entity.Dvd;
+
+@Repository
 public class DvdDaoImpl implements DvdDao {
-	Connection connection=null;
-	PreparedStatement preparedStatement;
 
-	public void connectToDataBase() {
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WileyDI004", "root", "root-Juli-23");
-		} catch (ClassNotFoundException | SQLException e) {
-			e.printStackTrace();
-		}
-
-	}
 	// Get all records - choice 1
-	@SuppressWarnings("finally")
 	@Override
 	public List<Dvd> getAllRecords() {
+		Connection connection = null;
+		PreparedStatement preparedStatement;
 		List<Dvd> dvdList = new ArrayList<Dvd>();
 		try {
 
-			connectToDataBase();
+			Class.forName("com.mysql.cj.jdbc.Driver");
+
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WileyDI004", "root", "root-Juli-23");
+
 			preparedStatement = connection.prepareStatement("SELECT * FROM DVD");
 
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -47,7 +45,9 @@ public class DvdDaoImpl implements DvdDao {
 				dvdList.add(dvd);
 			}
 
-		}catch (SQLException e) {
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			try {
@@ -62,8 +62,14 @@ public class DvdDaoImpl implements DvdDao {
 	// Add a record - choice 2
 	@Override
 	public int addRecord(Dvd dvd) {
+		Connection connection = null;
+		PreparedStatement preparedStatement;
+		Scanner scanner = new Scanner(System.in);
 		try {
-			connectToDataBase();
+			Class.forName("com.mysql.cj.jdbc.Driver");
+
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/WileyDI004", "root", "root-Juli-23");
+
 			preparedStatement = connection.prepareStatement("INSERT INTO DVD VALUES(?,?,?,?,?,?)");
 
 			preparedStatement.setInt(1, dvd.getDvdID());
@@ -77,57 +83,11 @@ public class DvdDaoImpl implements DvdDao {
 
 			return rows;
 
-		} catch (SQLException e) {
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		finally {
-			try {
-				connection.close();  // 4. close connection
-			}catch(SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return 0;
-	}
-
-	// Delete record
-	@Override
-	public int deleteRecord(int dvdID) {
-		try {
-			connectToDataBase();
-			preparedStatement = connection.prepareStatement("DELETE FROM DVD WHERE DvdID=?");
-			preparedStatement.setInt(1, dvdID);
-			int rows = preparedStatement.executeUpdate();
-
-			return rows;
-
 		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		finally {
-			try {
-				connection.close();
-			}catch(SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return 0;
-	}
-	
-	// Update record
-	@Override
-	public int updateRecord(int id, int newRating) {
-		try {
-			connectToDataBase();
-			String query="UPDATE DVD SET UserRating="+newRating+" where DvdID="+id;
-			preparedStatement = connection.prepareStatement(query);
-			
-			int rows = preparedStatement.executeUpdate();
-			System.out.println(rows);
-			return rows;
-
-		} catch (SQLException e) {
-			e.printStackTrace();
+			return 0;
 		} finally {
 			try {
 //				4.Close Connection
@@ -137,7 +97,8 @@ public class DvdDaoImpl implements DvdDao {
 				e.printStackTrace();
 			}
 		}
-	return 0;
-	}
 
+		return 0;
+	
+	}
 }
