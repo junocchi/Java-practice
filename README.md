@@ -1,5 +1,5 @@
 # Java-practice
-Exercises and tech tests while learning Java,jQuery with Ajax, and Spring Boot as a trainee at Wiley Edge.
+Exercises and tech tests while learning Java, jQuery with Ajax, and Spring Boot as a trainee at Wiley Edge.
 
 ## Tech Tests:
 - Flooring Order - Group Project (Maven, Spring with Java Configuration)
@@ -10,8 +10,18 @@ Exercises and tech tests while learning Java,jQuery with Ajax, and Spring Boot a
 - Game Rock, Paper, Scissors
 - Print Factorial
 
-## jQuery with Ajax:
-- Users Ajax API request with two tabs
+## Java Web App:
+
+### Spring Boot JDBC
+- SpringBootDvdJDBCProperties: with the `application.properties` file
+
+### Spring JDBC (Java Database Connectivity)
+- DvdJDBCPSpringJavaConfig: with Java Configuration
+- DvdJDBCPSpringJavaConfigtoTemplateWithRowMapper: with Row Mapper (converted from Java Configuration)
+
+### jQuery and jQuery with Ajax:
+- jQuery (query integration to the HTML file tag <script></script>)
+- jQuery with Ajax API request (fake API used: https://dummyjson.com/)
 
 ##### Output of tab 1 - Display All Users
 <img height="200" src="./JavaWebApp/src/DisplayAllUsers1.png">
