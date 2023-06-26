@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ju.demo</groupId>
-	<artifactId>EmployeeRestAPI</artifactId>
+	<artifactId>DvdRestAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>EmployeeRestAPI</name>
-	<description>Demo project for Spring Boot</description>
+	<name>DvdRestAPI</name>
+	<description>Dvd Spring Boot with REST API</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
