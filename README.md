@@ -11,7 +11,17 @@ Exercises and tech tests while learning Java, jQuery with Ajax, and Spring Boot 
 - Print Factorial
 
 ## Java Web App:
-
+### Dvd REST API
+- Get a DVD by its ID number (request: http://localhost:8082/dvds/5)
+```json
+{"dvdID":5,"title":"Beetlejuice","mpaaRating":6,"directorName":"Tim_Burton","studio":"Warner","userRating":7}
+```
+  
+- Get all DVDs from the database (request: http://localhost:8082/dvds)
+```json
+{"dvds":[{"dvdID":5,"title":"Beetlejuice","mpaaRating":6,"directorName":"Tim_Burton","studio":"Warner","userRating":7},{"dvdID":11,"title":"The Shawshank Redemption","mpaaRating":4,"directorName":"Frank Darabont","studio":"Columbia Pictures","userRating":9},{"dvdID":12,"title":"The Godfather","mpaaRating":5,"directorName":"Francis Ford Coppola","studio":"Paramount Pictures","userRating":9},{"dvdID":13,"title":"Pulp Fiction","mpaaRating":4,"directorName":"Quentin Tarantino","studio":"Miramax Films","userRating":8},{"dvdID":14,"title":"The Dark Knight","mpaaRating":5,"directorName":"Christopher Nolan","studio":"Warner Bros.","userRating":9},{"dvdID":15,"title":"Fight Club","mpaaRating":5,"directorName":"David Fincher","studio":"20th Century Fox","userRating":8},{"dvdID":16,"title":"Inception","mpaaRating":4,"directorName":"Christopher Nolan","studio":"Warner Bros.","userRating":9},{"dvdID":17,"title":"The Matrix","mpaaRating":4,"directorName":"Lana Wachowski","studio":"Warner Bros.","userRating":8},{"dvdID":18,"title":"The Lord of the Rings One","mpaaRating":4,"directorName":"Peter Jackson","studio":"New Line Cinema","userRating":9},{"dvdID":19,"title":"Forrest Gump","mpaaRating":4,"directorName":"Robert Zemeckis","studio":"Paramount Pictures","userRating":9},{"dvdID":20,"title":"The Avengers","mpaaRating":3,"directorName":"Joss Whedon","studio":"Marvel Studios","userRating":8}]}
+```
+  
 ### Spring Boot JDBC
 - SpringBootDvdJDBCProperties: with the `application.properties` file
 
