@@ -40,7 +40,7 @@
 	$(document).ready(function() {
 		$("#search").click(function() {
 			$.ajax({
-				url : "http://localhost:8082/dvds/" + $("#dvdId").val(),
+				url : "http://localhost:8082/dvds/" + $("#dvdID").val(),
 				type : "GET",
 				success : function(data) {
 					$("#showDvd").html(displayDvdbyID(data));

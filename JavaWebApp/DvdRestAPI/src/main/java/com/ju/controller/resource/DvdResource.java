@@ -6,6 +6,7 @@ import org.springframework.http.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +21,8 @@ public class DvdResource {
 	@Autowired
 	DvdService dvdService;
 
-	@GetMapping(path = "/dvds/{dvdId}",produces = MediaType.APPLICATION_JSON_VALUE)
+	@CrossOrigin
+	@GetMapping(path = "/dvds/{dvdID}",produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Dvd> searchDvdByIdResource(@PathVariable("dvdId") int id) {
 		Dvd dvd=dvdService.searchDvdById(id);
 		ResponseEntity response=null;
@@ -31,6 +33,7 @@ public class DvdResource {
 		return response;
 	}
 	
+	@CrossOrigin
 	@GetMapping(path="/dvds",produces = MediaType.APPLICATION_JSON_VALUE )
 	public ResponseEntity<DvdList> getAllDvds() {
 		DvdList dvdList= new DvdList(dvdService.getAllDvds());
