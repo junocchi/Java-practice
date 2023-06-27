@@ -1,0 +1,98 @@
+<!-- 
+  Create the Ajax call for these two api's
+1. http://localhost:8082/dvds
+2. http://localhost:8082/dvds/5
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DVDs</title>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+<link rel="stylesheet" href="../../src/styleOne.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$("#tabs").tabs();
+	});
+
+	//Tab 1: display all dvds
+	//add: API url, request type, if success what is should do, and dataType of the response.
+	$(document).ready(function() {
+		$("#displayAllLink").click(function() {
+			$.ajax({
+				url : "http://localhost:8082/dvds",
+				type : "GET",
+				success : function(data) { //data is a variable that will store whatever is coming as a response
+					$("#showAllDvds").html(displayAllDvds(data));
+				},
+				dataType : "json",
+			});
+		});
+	});
+
+	//Tab 2: search DVD by ID number
+	//add: API url, request type, if success what is should do, and dataType of the response.
+	$(document).ready(function() {
+		$("#search").click(function() {
+			$.ajax({
+				url : "http://localhost:8082/dvds/" + $("#dvdId").val(),
+				type : "GET",
+				success : function(data) {
+					$("#showDvd").html(displayDvdbyID(data));
+				},
+				dataType : "json",
+			});
+		});
+	});
+
+	function displayAllDvds(data) {
+		var table = '<table border="1"><tr><th>DvdID</th><th>Title</th><th>MPAArating</th><th>DirectorName</th><th>Studio</th></th><th>UserRating</th></tr>';
+		for (var index = 0; index < 10; index++) {
+			table += "<tr><td>" + data.dvds[index].dvdID + "</td><td>"
+					+ data.dvds[index].title + "</td><td>"
+					+ data.dvds[index].mpaaRating + "</td><td>"
+					+ data.dvds[index].directorName + "</td><td>"
+					+ data.dvds[index].studio + "</td><td>"
+					+ data.dvds[index].userRating + "</td></tr>";
+		}
+		table += "</table>";
+		return table;
+	}
+	function displayDvdbyID(data) {
+		var table = '<table border="1"><tr><th>DvdID</th><th>Title</th><th>MPAArating</th><th>DirectorName</th><th>Studio</th></th><th>UserRating</th></tr>';
+
+		table += "<tr><td>" + data.dvdID + "</td><td>"
+		+ data.title + "</td><td>"
+		+ data.mpaaRating + "</td><td>"
+		+ data.directorName + "</td><td>"
+		+ data.studio + "</td><td>"
+		+ data.userRating + "</td></tr>";
+	
+	table += "</table>";
+	return table;
+}
+</script>
+</head>
+<body>
+	<div id="tabs">
+		<ul>
+			<li><a href="#tab-1">Display All Dvds</a></li>
+			<li><a href="#tab-2">Search Dvd By ID</a></li>
+		</ul>
+		<div id="tab-1">
+			<a id="displayAllLink" href="#">Display All Dvds</a>
+			<div id="getAllDvds"></div>
+		</div>
+		<div id="tab-2">
+			Enter Dvd ID <input type="text" id="dvdID" /><br />
+			<br /> <input type="button" value="Search DVD" id="search" />
+			<div id="showDvd"></div>
+		</div>
+	</div>
+</body>
+</html>
