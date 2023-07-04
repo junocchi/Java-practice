@@ -1,6 +1,4 @@
-# di004_mandatory_code-project_floor_mastery-team-4
-di004_mandatory_code-project_floor_mastery-team-4 created by GitHub Classroom
-
+# Project Flooring Orders Team-4
 The goal of this mastery project is to create an application that can read and write flooring orders for Wiley Edge Corp.
 
 ## Unit testing
