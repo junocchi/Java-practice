@@ -6,84 +6,84 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "STUDENTJPA")
+@Table(name = "student")
 public class Student {
 	@Id
 	@Column
-	private int RollNo;
+	private int rollNo;
 	@Column
-	private String Name;
+	private String name;
 	@Column
-	private String Age;
+	private int sge;
 	@Column
-	private String StuClass;
+	private String classNo;
 	@Column
-	private String Address;
+	private String address;
 	@Column
-	private String PhoneNumber;
+	private long phoneNumber;
 
-	public Student(int rollNo, String name, String age, String stuClass, String address, String phoneNumber) {
+	public Student(int rollNo, String name, int sge, String classNo, String address, long phoneNumber) {
 		super();
-		RollNo = rollNo;
-		Name = name;
-		Age = age;
-		StuClass = stuClass;
-		Address = address;
-		PhoneNumber = phoneNumber;
+		this.rollNo = rollNo;
+		this.name = name;
+		this.sge = sge;
+		this.classNo = classNo;
+		this.address = address;
+		this.phoneNumber = phoneNumber;
 	}
 
 	public int getRollNo() {
-		return RollNo;
+		return rollNo;
 	}
 
 	public void setRollNo(int rollNo) {
-		RollNo = rollNo;
+		this.rollNo = rollNo;
 	}
 
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 
-	public String getAge() {
-		return Age;
+	public int getSge() {
+		return sge;
 	}
 
-	public void setAge(String age) {
-		Age = age;
+	public void setSge(int sge) {
+		this.sge = sge;
 	}
 
-	public String getStuClass() {
-		return StuClass;
+	public String getClassNo() {
+		return classNo;
 	}
 
-	public void setStuClass(String stuClass) {
-		StuClass = stuClass;
+	public void setClassNo(String classNo) {
+		this.classNo = classNo;
 	}
 
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 
 	public void setAddress(String address) {
-		Address = address;
+		this.address = address;
 	}
 
-	public String getPhoneNumber() {
-		return PhoneNumber;
+	public long getPhoneNumber() {
+		return phoneNumber;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
-		PhoneNumber = phoneNumber;
+	public void setPhoneNumber(long phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [RollNo=" + RollNo + ", Name=" + Name + ", Age=" + Age + ", StuClass=" + StuClass + ", Address="
-				+ Address + ", PhoneNumber=" + PhoneNumber + "]";
+		return "Student [rollNo=" + rollNo + ", name=" + name + ", sge=" + sge + ", classNo=" + classNo + ", address="
+				+ address + ", phoneNumber=" + phoneNumber + "]";
 	}
 
 }

@@ -2,4 +2,5 @@ CREATE DATABASE wileydi004jpa;
 
 USE wileydi004jpa;
 
-SELECT * FROM StudentJPA;
+SELECT * FROM Student;
+
