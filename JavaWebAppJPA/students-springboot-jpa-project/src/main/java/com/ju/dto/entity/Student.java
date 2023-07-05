@@ -14,19 +14,19 @@ public class Student {
 	@Column
 	private String name;
 	@Column
-	private int sge;
+	private int age;
 	@Column
-	private String classNo;
+	private int classNo;
 	@Column
 	private String address;
 	@Column
 	private long phoneNumber;
 
-	public Student(int rollNo, String name, int sge, String classNo, String address, long phoneNumber) {
+	public Student(int rollNo, String name, int age, int classNo, String address, long phoneNumber) {
 		super();
 		this.rollNo = rollNo;
 		this.name = name;
-		this.sge = sge;
+		this.age = age;
 		this.classNo = classNo;
 		this.address = address;
 		this.phoneNumber = phoneNumber;
@@ -48,19 +48,19 @@ public class Student {
 		this.name = name;
 	}
 
-	public int getSge() {
-		return sge;
+	public int getAge() {
+		return age;
 	}
 
-	public void setSge(int sge) {
-		this.sge = sge;
+	public void setAge(int age) {
+		this.age = age;
 	}
 
-	public String getClassNo() {
+	public int getClassNo() {
 		return classNo;
 	}
 
-	public void setClassNo(String classNo) {
+	public void setClassNo(int classNo) {
 		this.classNo = classNo;
 	}
 
@@ -82,7 +82,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [rollNo=" + rollNo + ", name=" + name + ", sge=" + sge + ", classNo=" + classNo + ", address="
+		return "Student [rollNo=" + rollNo + ", name=" + name + ", age=" + age + ", classNo=" + classNo + ", address="
 				+ address + ", phoneNumber=" + phoneNumber + "]";
 	}
 
