@@ -25,13 +25,12 @@ public class Vehicle {
 	@OneToMany
 	private List<Person> personList = new ArrayList<Person>();
 
-	public Vehicle(int vehicleNo, String type, String model, String color, List<Person> personList) {
+	public Vehicle(int vehicleNo, String type, String model, String color) {
 		super();
 		this.vehicleNo = vehicleNo;
 		this.type = type;
 		this.model = model;
 		this.color = color;
-		this.personList = personList;
 	}
 
 	public int getVehicleNo() {

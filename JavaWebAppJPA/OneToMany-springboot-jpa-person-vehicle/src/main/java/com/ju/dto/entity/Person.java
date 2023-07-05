@@ -1,5 +1,8 @@
 package com.ju.dto.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,6 +19,8 @@ public class Person {
 	private String name;
 	@Column
 	private int age;
+
+	private List<Vehicle> vehicleList = new ArrayList<Vehicle>();
 
 	public Person(int pID, String name, int age) {
 		super();
@@ -46,6 +51,15 @@ public class Person {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+	
+
+	public List<Vehicle> getVehicleList() {
+		return vehicleList;
+	}
+
+	public void setVehicleList(List<Vehicle> vehicleList) {
+		this.vehicleList = vehicleList;
 	}
 
 	@Override
