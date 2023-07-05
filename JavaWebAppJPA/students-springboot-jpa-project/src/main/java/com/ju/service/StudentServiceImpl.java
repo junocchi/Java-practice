@@ -4,17 +4,16 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.ju.dto.entity.Student;
 import com.ju.persistence.StudentDao;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 
-	private StudentDao studentDao;
-
 	@Autowired
-	public StudentServiceImpl(StudentDao studentDao) {
-		this.studentDao = studentDao;
-	}
+	private StudentDao studentDao;
 
 	@Override
 	public Student createNewStudent(Student student) {
