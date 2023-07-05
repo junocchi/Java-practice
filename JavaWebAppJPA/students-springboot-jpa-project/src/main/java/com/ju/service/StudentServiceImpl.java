@@ -1,79 +1,62 @@
 package com.ju.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.ju.dto.entity.Student;
 import com.ju.persistence.StudentDao;
 
 public class StudentServiceImpl implements StudentService {
 
-	private final StudentDao studentDao;
-	
+	private StudentDao studentDao;
+
 	@Autowired
-    public StudentServiceImpl(StudentDao studentDao) {
-        this.studentDao = studentDao;
-    }
-	
-	@Override
-	public List<Student> getAllStudents() {
-		return studentDao.getAllStudents();
+	public StudentServiceImpl(StudentDao studentDao) {
+		this.studentDao = studentDao;
 	}
 
 	@Override
-	public Student addNewStudent(Student student) {
-		String name = student.getName();
-		String age = student.getAge();
-		String stuClass = student.getStuClass();
-		String address = student.getAddress();
-		String phoneNumber = student.getPhoneNumber();
-
-        if (name.isBlank()) {
-            student.setName("Name blank, student NOT added");
-        }
-
-        if (age.isBlank()) {
-            student.setAge("Age blank, student NOT added");
-        }
-        
-        if (stuClass.isBlank()) {
-            student.setStuClass("Class blank, student NOT added");
-        }
-        
-        if (address.isBlank()) {
-            student.setAddress("Address blank, student NOT added");
-        }
-        
-        if (phoneNumber.isBlank()) {
-            student.setPhoneNumber("Phone Number blank, student NOT added");
-        }
-
-        return studentDao.createNewStudent(student);
+	public Student createNewStudent(Student student) {
+		if (getStudentById(student.getRollNo()) != null)
+			return null;
+		studentDao.save(student);
+		return student;
 	}
 
 	@Override
-	public Student getStudentByClass(String stuClass) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Student> getStudentsByClassNo(int classNo) {
+		return studentDao.getStudentsByClass(classNo);
 	}
 
 	@Override
-	public Student updateStudentAddress(int id, Student student) {
-		if (id != student.getRollNo()) {
-            student.setAddress("IDs do not match, student not updated");
-            return student;
-        }
+	public Student updateAddress(int id, String adress) {
+		Student student = getStudentById(id);
+		student.setAddress(adress);
 
-        studentDao.updateStudent(student);
-
-        return getStudentById(id);
+		studentDao.save(student);
+		return student;
 	}
 
 	@Override
-	public void deleteStudentById(int id) {
-		// TODO Auto-generated method stub
-		
+	public Student deleteStudentById(int id) {
+		Student student = getStudentById(id);
+
+		if (student == null)
+			return null;
+
+		studentDao.deleteById(id);
+		return student;
+	}
+
+	@Override
+	public Student getStudentById(int id) {
+		Optional<Student> optional = studentDao.findById(id);
+
+		if (optional.isPresent())
+			return optional.get();
+		else
+			return null;
 	}
 
 }
