@@ -1,0 +1,19 @@
+USE wileydi004;
+
+CREATE TABLE game (
+  gameId INT AUTO_INCREMENT PRIMARY KEY,
+  gameStatus VARCHAR(20) NOT NULL,
+  gameAnswer INT NOT NULL);
+  
+CREATE TABLE round (
+  roundId INT AUTO_INCREMENT PRIMARY KEY,
+  gameId INT NOT NULL,
+  guess VARCHAR(20) NOT NULL,
+  result VARCHAR(20) NOT NULL,
+  timeOfGuess DATETIME NOT NULL,
+  FOREIGN KEY (gameId) REFERENCES game (gameId));
+  
+SELECT * FROM game;
+
+SELECT * FROM round;
+
