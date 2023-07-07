@@ -2,33 +2,35 @@
 Exercises and tech tests while learning Java, jQuery with Ajax, and Spring Boot as a trainee at Wiley Edge.
 
 ## Tech Tests:
-- Flooring Order - Group Project (Maven, Spring with Java Configuration)
-- Vending Machine with Java Config class
-- Vending Machine Java Projects
-- DVD Library
 - Date & Time
+- DVD Library
+- Flooring Order - Group Project (Maven, Spring with Java Configuration)
 - Game Rock, Paper, Scissors
+- Guess the Number - Group Project (with @GetMapping, @PutMapping, and @PostMapping)
 - Print Factorial
+- Vending Machine Java Projects
+- Vending Machine with Java Config class
 
-## Java Web App:
+## Java Web App JPA:
 ### Students Spring Boot JPA
 - Creating a new student and getting a student by their class number (via console menu):
 
-<img height="200" src="./JavaWebAppJPA/src/StudentsJpa.png"> 
+<img height="400" src="./JavaWebAppJPA/src/StudentsJpa.png"> 
 
 - Confirmation that the new student has been created (MySQLWorkbench):
 
-<img height="200" src="./JavaWebAppJPA/src/StudentsJpaTable.png">
+<img height="150" src="./JavaWebAppJPA/src/StudentsJpaTable.png">
 
-### One-to-many Person-Vehicle
-- Using Hibernate/JPAData I added the seeds to the tables Person and Vehicle, and created an association OneToMany (one person has many vehicles):
+### One-to-many Person-Vehicle JPA
+- Using Hibernate/JPAData I added the seeds to tables Person and Vehicle, and created an association OneToMany (one person has many vehicles):
 
-<img height="150" src="./JavaWebAppJPA/src/Persontable.png">
+<img height="150" src="./JavaWebAppJPA/src/PersonTable.png">
 
 <img height="250" src="./JavaWebAppJPA/src/VehicleTable.png">
 
 <img height="250" src="./JavaWebAppJPA/src/Person_vehicleList.png">
 
+## Java Web App: 
 ### Dvd REST API
 - Get a DVD by its ID number (request: http://localhost:8082/dvds/5)
 ```json
