@@ -6,12 +6,13 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "NewPerson")
 public class Person {
-	
+
 	@Id
 	@Column
 	private int pID;
@@ -20,7 +21,12 @@ public class Person {
 	@Column
 	private int age;
 
+	@OneToMany
 	private List<Vehicle> vehicleList = new ArrayList<Vehicle>();
+
+	public Person () {
+		
+	}
 
 	public Person(int pID, String name, int age) {
 		super();
@@ -52,7 +58,6 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
 
 	public List<Vehicle> getVehicleList() {
 		return vehicleList;

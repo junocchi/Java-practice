@@ -22,9 +22,10 @@ public class Vehicle {
 	private String model;
 	@Column
 	private String color;
-	@OneToMany
-	private List<Person> personList = new ArrayList<Person>();
 
+	public Vehicle () {
+		
+	}
 	public Vehicle(int vehicleNo, String type, String model, String color) {
 		super();
 		this.vehicleNo = vehicleNo;
@@ -65,18 +66,9 @@ public class Vehicle {
 		this.color = color;
 	}
 
-	public List<Person> getPersonList() {
-		return personList;
-	}
-
-	public void setPersonList(List<Person> personList) {
-		this.personList = personList;
-	}
-
 	@Override
 	public String toString() {
-		return "Vehicle [vehicleNo=" + vehicleNo + ", type=" + type + ", model=" + model + ", color=" + color
-				+ ", personList=" + personList + "]";
+		return "Vehicle [vehicleNo=" + vehicleNo + ", type=" + type + ", model=" + model + ", color=" + color + "]";
 	}
 
 }
