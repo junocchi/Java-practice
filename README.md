@@ -11,6 +11,12 @@ Exercises and tech tests while learning Java, jQuery with Ajax, and Spring Boot 
 - Print Factorial
 
 ## Java Web App:
+### Students Spring Boot JPA
+- Creating a new student and getting a student by their class number:
+<img height="200" src="./JavaWebAppJPA/src/StudentsJpa.png">
+- Confirmation that the new student has been created (MySQLWorkbench):
+<img height="200" src="./JavaWebAppJPA/src/StudentsJpaDatabaseMySQL.png">
+
 ### Dvd REST API
 - Get a DVD by its ID number (request: http://localhost:8082/dvds/5)
 ```json
