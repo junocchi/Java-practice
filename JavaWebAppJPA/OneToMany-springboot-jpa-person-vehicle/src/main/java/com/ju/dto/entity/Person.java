@@ -10,7 +10,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "NewPerson")
+@Table(name = "Person")
 public class Person {
 
 	@Id
@@ -21,6 +21,8 @@ public class Person {
 	@Column
 	private int age;
 
+//	@OneToMany(mappedBy = "person")
+//	private List<Vehicle> vehicleList = new ArrayList<>();
 	@OneToMany
 	private List<Vehicle> vehicleList = new ArrayList<Vehicle>();
 

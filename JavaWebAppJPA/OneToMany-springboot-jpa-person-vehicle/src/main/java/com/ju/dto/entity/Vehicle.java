@@ -3,6 +3,8 @@ package com.ju.dto.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -10,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "NewVehicle")
+@Table(name = "Vehicle")
 public class Vehicle {
 
 	@Id
@@ -22,7 +24,7 @@ public class Vehicle {
 	private String model;
 	@Column
 	private String color;
-
+	
 	public Vehicle () {
 		
 	}
