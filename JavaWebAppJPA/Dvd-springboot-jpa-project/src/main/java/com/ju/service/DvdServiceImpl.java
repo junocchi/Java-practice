@@ -2,7 +2,6 @@ package com.ju.service;
 
 import java.util.List;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,35 +13,43 @@ public class DvdServiceImpl implements DvdService {
 	@Autowired
 	private DvdDao dvdDao;
 
+	// GET by iD
 	@Override
 	public Dvd searchDvdById(int id) {
-		return dvdDao.getRecordById(id);
+		Dvd dvd = dvdDao.findById(id).orElse(null);
+		return dvd;
 	}
 
+	// GET all
 	@Override
 	public List<Dvd> getAllDvds() {
-		return dvdDao.getAllRecords();
+		return dvdDao.findAll();
 	}
 
 	@Override
-	public boolean insertDvd(Dvd dvd) {
-		return dvdDao.saveRecord(dvd) > 0;
+	public Dvd insertDvd(Dvd dvd) {
+		// save = save or update
+		if (searchDvdById(dvd.getDvdId()) == null)
+			return dvdDao.save(dvd);
+		else
+			return null;
 	}
 
 	@Override
-	public Dvd deleteDvd(int id) {
-		Dvd dvd = searchDvdById(id);
-
+	public Dvd deleteDvdById(int dvdId) {
+		Dvd dvd = searchDvdById(dvdId);
 		if (dvd != null)
-			dvdDao.deleteRecord(id);
-
+			dvdDao.deleteById(dvdId);
 		return dvd;
 	}
 
 	@Override
-	public Dvd updateDvdUserRating(int id, int userRating) {
-		if (dvdDao.updateUserRating(id, userRating) > 0)
-			return searchDvdById(id);
-		return null;
+	public Dvd updateDvdUserRating(int dvdId, int updateUserRating) {
+		Dvd dvd = searchDvdById(dvdId);
+		if (dvd != null) {
+			dvd.setUserRating(dvd.getUserRating() + updateUserRating);
+			dvdDao.save(dvd);
+		}
+		return dvd;
 	}
 }

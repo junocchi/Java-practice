@@ -38,22 +38,22 @@ public class DvdPresentationImpl implements DvdPresentation {
 
 		// Add a DVD to the table - choice 1
 		case 1:
-			Dvd newDvd = new Dvd();
+			Dvd dvd = new Dvd();
 
 			System.out.println("Enter Dvd ID: ");
-			newDvd.setDvdID(scanner.nextInt());
+			dvd.setDvdId(scanner.nextInt());
 			System.out.println("Enter Dvd Title: ");
-			newDvd.setTitle(scanner.next());
+			dvd.setTitle(scanner.next());
 			System.out.println("Enter Dvd MPAA Rating: ");
-			newDvd.setMpaaRating(scanner.nextInt());
+			dvd.setMpaaRating(scanner.nextInt());
 			System.out.println("Enter Dvd Director Name: ");
-			newDvd.setDirectorName(scanner.next());
+			dvd.setDirectorName(scanner.next());
 			System.out.println("Enter Dvd Studio: ");
-			newDvd.setStudio(scanner.next());
+			dvd.setStudio(scanner.next());
 			System.out.println("Enter Dvd User Rating: ");
-			newDvd.setUserRating(scanner.nextInt());
+			dvd.setUserRating(scanner.nextInt());
 
-			if (dvdService.insertDvd(newDvd))
+			if (dvdService.insertDvd(dvd) != null)
 				System.out.println("New Dvd Added.");
 			else
 				System.out.println("Dvd Not Added.");
@@ -62,32 +62,34 @@ public class DvdPresentationImpl implements DvdPresentation {
 		// Remove a DVD from the Table
 		case 2:
 			System.out.println("Enter Dvd ID: ");
-			int id = scanner.nextInt();
+			int dvdId = scanner.nextInt();
 
-			if (dvdService.deleteDvd(id))
-				System.out.println("Dvd Deleted.");
+			if (dvdService.deleteDvdById(dvdId) != null)
+				System.out.println("The Dvd with id " + dvdId + " was deleted");
 			else
-				System.out.println("Dvd Not Deleted.");
+				System.out.println("Dvd with id " + dvdId + " does not exist");
 			break;
 
-		// Edit DVD Rating
+		// Update DVD Rating
 		case 3:
 			System.out.println("Enter the DVD ID: ");
-			int dvdId = scanner.nextInt();
-			System.out.println("Enter new rating : ");
+			int dId = scanner.nextInt();
+			System.out.println("Enter new user rating : ");
 			int newRating = scanner.nextInt();
-			if (dvdService.updateDvdUserRating(dvdId, newRating))
-				System.out.println("DVD has a new rating!");
-			else
-				System.out.println("Unable to process rating change");
+			Dvd updatedDvdUserRating = dvdService.updateDvdUserRating(dId, newRating);
+			if (updatedDvdUserRating != null) {
+				System.out.println("DVD has a new user rating of:");
+				System.out.println(updatedDvdUserRating);
+			} else
+				System.out.println("Unable to process rating change because Dvd with id " + dId + " does not exist");
 			break;
 
 		// Get all the DVDs in the Table
 		case 4:
-			List<Dvd> dvdList = dvdService.getAllDvds();
-			for (Dvd dvd : dvdList) {
+			List<Dvd> dvds = dvdService.getAllDvds();
+			for (Dvd eachDvd : dvds) {
 
-				System.out.println(dvd);
+				System.out.println(eachDvd);
 			}
 			break;
 

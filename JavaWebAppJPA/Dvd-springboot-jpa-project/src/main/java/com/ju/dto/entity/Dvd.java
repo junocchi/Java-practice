@@ -37,11 +37,11 @@ public class Dvd {
 		this.userRating = userRating;
 	}
 
-	public int getDvdID() {
+	public int getDvdId() {
 		return dvdID;
 	}
 
-	public void setDvdID(int dvdID) {
+	public void setDvdId(int dvdID) {
 		this.dvdID = dvdID;
 	}
 

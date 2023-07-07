@@ -9,9 +9,10 @@ public interface DvdService {
 
 	public List<Dvd> getAllDvds();
 
-	public boolean insertDvd(Dvd dvd);
+	public Dvd insertDvd(Dvd dvd);
 
-	public Dvd deleteDvd(int id);
+	public Dvd deleteDvdById(int id);
 
 	public Dvd updateDvdUserRating(int id, int userRating);
+
 }
