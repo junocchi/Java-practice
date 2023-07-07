@@ -22,6 +22,9 @@ public class Student {
 	@Column
 	private long phoneNumber;
 
+	public Student() {
+		
+	}
 	public Student(int rollNo, String name, int age, int classNo, String address, long phoneNumber) {
 		super();
 		this.rollNo = rollNo;
