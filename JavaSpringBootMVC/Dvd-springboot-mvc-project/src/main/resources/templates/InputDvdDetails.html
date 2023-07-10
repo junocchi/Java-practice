@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>DVDs</title>
+</head>
+<body>
+	<h1>DVD Library</h1>
+	<hr>
+	<form action="#" th:action="@{./saveDvd}" th:object="${dvd}"
+		method="post">
+		Enter DVD ID : <input type="text" th:field="*{dvdId}"><br>
+		<br> Enter DVD Name : <input type="text" th:field="*{dvdTitle}"><br>
+		<br> Enter DVD MPAA Rating: <input type="text"
+			th:field="*{dvdMpaaRating}"><br>
+		<br> Enter DVD Director Name: <input type="text"
+			th:field="*{dvdDirectorName}"><br>
+		<br> Enter DVD Studio: <input type="text" th:field="*{dvdStudio}"><br>
+		<br> Enter DVD User Rating: <input type="text"
+			th:field="*{dvdUserRating}"><br>
+		<br> <input type="submit" value="Save Dvd">
+	</form>
+	<!--  
+	<form action="./saveEmployee" method="post">
+	Enter Employee ID : <input type="text" name="eId"><br><br>
+	Enter Employee Name : <input type="text" name="eName"><br><br>
+	Enter Employee Designation : <input type="text" name="eDesignation"><br><br>
+	Enter Employee Department : <input type="text" name="eDepartment"><br><br>
+	Enter Employee Salary : <input type="text" name="eSalary"><br><br>
+	<input type="submit" value="Save Employee">
+	</form>
+	-->
+	<br>
+	<br>
+	<a href="/">GoTo Main Page</a>
+</body>
+</html>

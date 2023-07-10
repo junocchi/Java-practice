@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>DVDs</title>
+</head>
+<body>
+	<h1>DVD Library</h1>
+	<hr>
+	<table border="1">
+		<tr>
+			<th>DVD ID</th>
+			<th>DVD title</th>
+			<th>DVD MPAA Rating</th>
+			<th>DVD Director Name</th>
+			<th>DVD Studio</th>
+			<th>DVD User Rating</th>
+		</tr>
+		<tr th:each="dvd : ${dvdList}">
+			<td th:text="${dvd.dvdId}"></td>
+			<td th:text="${dvd.dvdTitle}"></td>
+			<td th:text="${dvd.dvdMpaaRating}"></td>
+			<td th:text="${dvd.dvdDirectorName}"></td>
+			<td th:text="${dvd.dvdStudio}"></td>
+			<td th:text="${dvd.dvdUserRating}"></td>
+		</tr>
+	</table>
+	<br>
+	<br>
+	<a href="/">Go to the Main Page</a>
+</body>
+</html>
