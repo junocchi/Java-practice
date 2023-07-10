@@ -18,6 +18,12 @@ public class DvdServiceImpl implements DvdService {
 	public Dvd getDvdById(int dvdId) {
 		return dvdDao.findById(dvdId).orElse(null);
 	}
+	
+	// GET Dvd by Title
+//	@Override
+//	public Dvd getDvdByTitle(String title) {
+//		return dvdDao.findDvdByTitle(title).orElse(null);
+//	}
 
 	// GET all
 	@Override
@@ -59,13 +65,6 @@ public class DvdServiceImpl implements DvdService {
 			dvdDao.save(dvd);
 			return true;
 		}
-		return false;
-	}
-
-	// GET Dvd by Title
-	@Override
-	public boolean getDvdByTitle(String parameter) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 }
