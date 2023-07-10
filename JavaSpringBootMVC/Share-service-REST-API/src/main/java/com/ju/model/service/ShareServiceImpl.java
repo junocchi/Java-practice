@@ -1,5 +1,7 @@
 package com.ju.model.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,5 +18,12 @@ public class ShareServiceImpl implements ShareService {
 	public Share searchShareNameById(int id) {
 		return shareServiceDao.getRecordById(id);
 	}
+
+	@Override
+	public List<Share> getAllShares() {
+		return shareServiceDao.getAllRecords();
+	}
+
+	
 
 }
