@@ -24,6 +24,4 @@ public class ShareServiceImpl implements ShareService {
 		return shareServiceDao.getAllRecords();
 	}
 
-	
-
 }

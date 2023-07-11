@@ -8,10 +8,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @SpringBootApplication(scanBasePackages = "com.ju")
 @EntityScan(basePackages = "com.ju.dto.entity")
 @EnableJpaRepositories(basePackages = "com.ju.persistence")
-public class CustomerServiceRestApiJpa2Application {
+public class CustomerServiceRestApiJpaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CustomerServiceRestApiJpa2Application.class, args);
+		SpringApplication.run(CustomerServiceRestApiJpaApplication.class, args);
 	}
 
 }
