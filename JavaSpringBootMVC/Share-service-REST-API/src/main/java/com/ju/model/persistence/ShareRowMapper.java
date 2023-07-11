@@ -11,12 +11,12 @@ public class ShareRowMapper implements RowMapper<Share> {
 	@Override
 	public Share mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 
-		Share shareService = new Share();
+		Share share = new Share();
 
-		shareService.setShareId(resultSet.getInt("SHAREID"));
-		shareService.setShareName(resultSet.getNString("SHARENAME"));
-		shareService.setMarketPrice(resultSet.getDouble("MARKETPRICE"));
+		share.setShareId(resultSet.getInt("SHAREID"));
+		share.setShareName(resultSet.getNString("SHARENAME"));
+		share.setMarketPrice(resultSet.getDouble("MARKETPRICE"));
 
-		return shareService;
+		return share;
 	}
 }
