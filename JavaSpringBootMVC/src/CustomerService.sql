@@ -1,24 +1,22 @@
 USE wileydi004;
-DROP TABLE CUSTOMER_SERVICE;
+DROP TABLE CustomerShareDetails;
 
-CREATE TABLE CUSTOMER_SERVICE(
+CREATE TABLE CustomerShareDetails(
 DetailsId INT,
 CustomerId INT,
-ShareId INT AUTO_INCREMENT,
+ShareId INT, 
 ShareType VARCHAR(30),
 Quantity DOUBLE,
-CONSTRAINT PK_DetailsId PRIMARY KEY (ShareId),
-CONSTRAINT FK_ShareId FOREIGN KEY (ShareId)
-	REFERENCES SHARE_SERVICE (ShareId)
+CONSTRAINT PK_DetailsId PRIMARY KEY (ShareId)
 );
 
-INSERT INTO CUSTOMER_SERVICE (DetailsId, CustomerId, ShareType, Quantity) VALUES
-(101, 1001, 'A', 10.5),
-(102, 1002, 'B', 5.2),
-(103, 1003, 'C', 8.7),
-(104, 1004, 'D', 15.9),
-(105, 1005, 'E', 20.3),
-(106, 1006, 'F', 12.1),
-(107, 1007, 'G', 3.8);
+INSERT INTO CustomerShareDetails (DetailsId, CustomerId, ShareId, ShareType, Quantity) VALUES
+(101, 1, 1001, 'A', 10.5),
+(102, 2, 1002, 'B', 5.2),
+(103, 3, 1003, 'C', 8.7),
+(104, 4, 1004, 'D', 15.9),
+(105, 5, 1005, 'E', 20.3),
+(106, 6, 1006, 'F', 12.1),
+(107, 7, 1007, 'G', 3.8);
 
-SELECT * FROM CUSTOMER_SERVICE;
+SELECT * FROM CustomerShareDetails;

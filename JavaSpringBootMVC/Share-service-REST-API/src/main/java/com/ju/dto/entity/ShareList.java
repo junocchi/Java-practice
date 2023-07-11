@@ -2,6 +2,7 @@ package com.ju.dto.entity;
 
 import java.util.List;
 
+// We create this class to encapsulate the list and be able to return it in our ShareResource
 public class ShareList {
 	private List<Share> shares;
 

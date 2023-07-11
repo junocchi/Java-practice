@@ -18,7 +18,7 @@ public class ShareDaoImpl implements ShareDao {
 	@Override
 	public Share getRecordById(int id) {
 		try {
-			return jdbcTemplate.queryForObject("SELECT * FROM SHARE_SERVICE WHERE SHAREID=?", new ShareRowMapper(), id);
+			return jdbcTemplate.queryForObject("SELECT * FROM ShareService WHERE ShareId=?", new ShareRowMapper(), id);
 		} catch (EmptyResultDataAccessException ex) {
 			return null;
 		}
@@ -26,7 +26,7 @@ public class ShareDaoImpl implements ShareDao {
 
 	@Override
 	public List<Share> getAllRecords() {
-		return jdbcTemplate.query("SELECT * FROM SHARE_SERVICE", new ShareRowMapper());
+		return jdbcTemplate.query("SELECT * FROM ShareService", new ShareRowMapper());
 	}
 
 }

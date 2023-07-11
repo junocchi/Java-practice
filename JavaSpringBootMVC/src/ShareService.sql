@@ -1,12 +1,14 @@
 USE wileydi004;
 
-CREATE TABLE SHARE_SERVICE(
+DROP TABLE ShareService;
+
+CREATE TABLE ShareService(
 ShareId INT AUTO_INCREMENT,
 ShareName VARCHAR(30),
 MarketPrice DOUBLE,
 CONSTRAINT PK_ShareId PRIMARY KEY (ShareId));
 
-INSERT INTO SHARE_SERVICE (ShareId, ShareName, MarketPrice) VALUES
+INSERT INTO ShareService (ShareId, ShareName, MarketPrice) VALUES
 (1, 'Apple', 150.75),
 (2, 'Microsoft', 300.50),
 (3, 'Amazon', 3500.25),
@@ -16,4 +18,4 @@ INSERT INTO SHARE_SERVICE (ShareId, ShareName, MarketPrice) VALUES
 (7, 'Netflix', 550.75),
 (8, 'Alphabet', 2750.60);
 
-SELECT * FROM SHARE_SERVICE;
+SELECT * FROM ShareService;
