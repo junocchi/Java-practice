@@ -23,10 +23,10 @@ public class CustomerDetailsServiceImpl implements CustomerDetailsService {
 
 		List<CustomerDetail> customerDetailList = new ArrayList<CustomerDetail>();
 		CustomerShareDetailsList customerShareDetailsList = restTemplate
-				.getForObject("http://localhost:9004/customers" + customerId, CustomerShareDetailsList.class);
+				.getForObject("http://localhost:9004/customers/" + customerId, CustomerShareDetailsList.class);
 		for (CustomerShareDetails customerShareDetails : customerShareDetailsList.getCustomerShareDetails()) {
 
-			Share share = restTemplate.getForObject("http://localhost:9002/shares/" + customerShareDetails.getShareId(),
+			Share share = restTemplate.getForObject("http://localhost:9002/Shares/" + customerShareDetails.getShareId(),
 					Share.class);
 
 			CustomerDetail customerDetail = new CustomerDetail(customerId, share.getShareName(),

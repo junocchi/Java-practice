@@ -7,6 +7,10 @@ public class Share {
 
 	public Share() {
 		super();
+	}
+
+	public Share(int shareId, String shareName, double marketPrice) {
+		super();
 		this.shareId = shareId;
 		this.shareName = shareName;
 		this.marketPrice = marketPrice;

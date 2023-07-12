@@ -3,7 +3,11 @@ package com.ju.dto.entity;
 import java.util.List;
 
 public class CustomerShareDetailsList {
-	
+
+	public CustomerShareDetailsList() {
+		super();
+	}
+
 	List<CustomerShareDetails> customerShareDetails;
 
 	public CustomerShareDetailsList(List<CustomerShareDetails> customerShareDetails) {
